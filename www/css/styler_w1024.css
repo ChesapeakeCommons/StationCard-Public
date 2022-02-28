@@ -1,0 +1,93 @@
+@media only screen and (max-width:1024px) and (min-width: 640px) {
+
+    #Map{
+        height: calc(100% - 350px);
+
+        /* height: calc(var(--map-height) + 300px) !important;*/
+    }
+
+    .leaflet-top{
+        top: 40px;
+    }
+    .leaflet-control-zoom, .leaflet-control-layers {
+
+        display: block ;
+    }
+
+    .leaflet-control-zoom{
+    //    top: 40px;
+    }
+
+
+
+    #tablet_layout_container {
+        display: inline-block;
+        width: 100%;
+        background-color: unset;
+        border: 0px solid green;
+        margin-top: 10px;
+    }
+
+    #text{
+        display: inline-block;
+        position: relative;
+        width: 50%; !important;
+        max-width: 47%;
+        height: 20px;
+    }
+
+    #table_col_l, #table_col_r {
+        display: table !important;
+        position: relative;
+        width: 500px !important;
+        height: 20px;
+        max-width: 500px !important;
+        padding: 0 20px 0 20px;
+    }
+
+    #tablet_col_l {
+        float: left;
+        border: 0px solid purple;
+    }
+
+    #tablet_col_r {
+        float: right;
+        border: 0px solid blue;
+    }
+
+    #StationNameText{
+        margin-top: unset;
+    }
+
+    #status_container{
+        width: 45%;
+        margin-top: 10px;
+    }
+
+
+    #param_select_containter{
+        width: 50%;
+        min-width: 220px;
+        font-size: 14px;
+
+    }
+
+    #AverageReading_DateRange, #WatershedName, #LatLong{
+        font-size: 16px;
+    }
+
+    .tab-content{
+        border-left: 1px solid #cccccc;
+    }
+
+    #GaugeTitle > h4, #TrendsTitle > h4{
+        border-left: 0px solid #cccccc;
+        margin-top: unset;
+        padding-top: 10px;
+    }
+
+    #tablet_col_l{
+        font-size: 16px;
+    }
+
+}

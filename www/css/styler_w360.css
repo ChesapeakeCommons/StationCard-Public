@@ -1,0 +1,89 @@
+@media only screen and (max-width:440px){
+    .leaflet-container .leaflet-control-attribution {
+        font-size: 6px;
+        margin-left: 100px;
+    }
+}
+
+@media only screen and (max-width:360px) {
+
+    /* START Header */
+    #main_header{
+        height: 30px;
+    }
+
+    #GroupLogo {
+        height: 30px;
+        width: 30px;
+    }
+
+    #GroupLogo > #GroupLogoImage{
+        height: 30px;
+        width: 30px;
+    }
+
+    #GroupName {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        left: 35px;
+    }
+    /* END Header */
+
+    /* START info */
+    .station_next, .station_prev {
+        width: 20px;
+        height: 20px;
+    }
+
+    #StationNameText{
+        font-size: 15px;
+        height: 25px;
+    }
+
+    #status_container{
+    }
+
+    #StatusDot{
+        width : 30px !important;
+        height : 30px !important;
+    }
+
+    .status_item_2{
+        font-size: 12px;
+    }
+
+    /* END info */
+
+    /* START param select */
+
+    #param_select_containter{
+        width: unset;
+        min-width: 150px;
+    }
+
+    selectize-input {
+        min-height : 24px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .selectize-input > div{
+        font-size: 12px;
+    }
+
+    /* END param select*/
+
+    /*Start Social QR*/
+
+    #MoreInfoLink{
+        padding-top: 0;
+    padding-bottom: 0;
+    }
+
+    #qr-icon {
+        height: 20px !important;
+        width: 20px !important;
+    }
+
+    /*End Social QR*/
+}

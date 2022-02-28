@@ -1,0 +1,129 @@
+
+#DropDown {
+
+}
+
+/*.selectize-dropdown {
+    top: -200px !important;
+}
+*/
+.load-container {
+    margin-left: 50% ;
+    margin-right: 50% ;
+    margin: 0 auto;
+    position: relative;
+    top: 50% !important;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    overflow: visible !important;
+     width: 100% !important;
+    /* text-align: center;*/
+}
+
+
+.loader:before{
+
+    color: var( --color-one) !important;
+    background: var( --color-one) !important;
+
+}
+.loader:after{
+
+    color: var( --color-one) !important;
+    background: var( --color-one) !important;
+
+}
+
+#TrendsPlot {
+    height: 230px !important;
+}
+
+#GaugePlot {
+    width: var(--gauge-width) !important;
+
+    height: var(--gauge-height) !important;
+
+}
+
+#GaugeTitle > h4, #TrendsTitle > h4{
+    margin-bottom: 0px;
+}
+
+.svg-container {
+    width: unset !important;
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+
+}
+
+.main-svg {
+    overflow: visible;
+
+}
+
+@media only screen and (max-width:360px) {
+
+    #GaugeTitle > h4, #TrendsTitle > h4{
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: -15px;:
+    }
+
+    .nav-tabs > li > a{
+        font-size: 12px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    #starterLogo > {
+        font-size: 12px;
+    }
+
+    #footer > a {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width:1025px) {
+    #GaugePlot {
+        height: calc(var(--gauge-height) + 50px) !important;
+    }
+
+    #GaugeTitle > h4, #TrendsTitle > h4{
+      text-align: left !important;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    #TrendsPlot {
+        height: 265px !important;
+    }
+
+
+    .nav-tabs{
+        border-bottom: unset;
+    }
+    .tab-pane {
+        border-top: 1px solid #ddd;
+    }
+    .nav-tabs > li{
+        display:none;
+    }
+
+    .nav-tabs > #qr-tab{
+        display:block;
+        float: left;
+        margin-top: -11px;
+        margin-left: -9px;
+        margin-bottom: -3px;
+    }
+
+    .tab-content > .tab-pane{
+        display: block !important;
+    }
+
+}
+
+

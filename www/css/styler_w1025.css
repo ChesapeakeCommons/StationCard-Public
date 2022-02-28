@@ -1,0 +1,266 @@
+/*
+for styles from 1024px: Small screens, laptops
+*/
+
+@import url("./styler_h736.css");
+
+@import url("./styler_w360.css");
+
+@import url("./plotly-styles-overrides.css");
+
+@import url("./styler_modal.css");
+
+@import url("./styler_w1024.css");
+
+@import url("./mapExpand.css");
+
+@import url("./loading.css");
+
+@import url('./circular_loader_001.css');
+
+
+html {
+     --mainInfo-width-for-1024 : 550px;
+     --map-width-for-1024: calc(100% - var( --mainInfo-width-for-1024));
+     --np-button-width-for-1024: 30px;
+    
+}
+
+@media only screen and (min-width:1025px) {
+  
+  body {
+    /*background-color: pink;
+      font-weight: 600;*/
+   /* background-size: 3%;
+    */
+  }
+
+  #main {
+    position: absolute;
+    display: block;
+    height: calc(100vh - 50px);
+    width:  var(--mainInfo-width-for-1024);
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: none;
+    
+    right: 0;
+    top: 0;
+    margin-top: 50px;
+    
+    border: 0px solid red;
+  }
+
+  #main_header{
+
+    position: fixed;
+      z-index: 600;
+
+      height: 50px;
+
+      background-color: var(--color-three) !important;
+
+      width: var(--mainInfo-width-for-1024);
+      right: 0;
+      top: 0;
+      left: unset;
+
+       padding: 5px 5px 5px 5px;
+      border-bottom: 1px solid #cccccc;
+  }
+
+  #main_info{
+      height: unset;
+  }
+
+    #GroupLogo {
+        border: var(--debug-border-width) solid black;
+
+        position: relative;
+        float: left;
+
+        left: unset;
+
+    }
+    #GroupName {
+
+        position: relative;
+        /*   float: right;*/
+        color: var(--color-three);
+        left: unset;
+        z-index: 1000;
+        float:left;
+
+        color: var(--color-five);
+        text-shadow: unset;
+        /* color: var(--color-one, #1e90ff); */
+        font-size: 22px;
+
+        padding-left: 5px;
+        padding-top: 5px;
+        /* margin: 5px 0px 0px 5px;*/
+    }
+
+
+      #Map{
+          display: block;
+          position: relative;
+          top: var(--zero);
+          left: 0px;
+              height: 100vh;
+          width: var(--map-width-for-1024);
+          margin-top: unset;
+          margin-bottom: 0;
+
+          border-bottom: 0px solid #cccccc;
+           border-right: 1px solid #cccccc;
+    }
+
+    #main_tabset {
+
+         margin: 0 10px 0 10px;
+    }
+
+
+    .leaflet-control-zoom, .leaflet-control-layers {
+
+      display: block ;
+    }
+
+
+    #NextPrevConatiner{
+
+        width: 100px;
+
+    }
+
+    .station_next, .station_prev{
+        position: relative;
+        display: block;
+        top: unset;
+        left: unset;
+        right: unset;
+        float:left;
+
+        width: var(--np-button-width-for-1024);
+        height: var(--np-button-width-for-1024);
+
+        margin: 5px 0px 5px 5px;
+
+
+
+        text-align: center;
+        box-shadow: unset;
+
+        border: 1px solid var(--color-one);
+        background-color: unset;
+
+/*          border-top-right-radius: unset;
+      border-top-left-radius : unset;
+      border-bottom-right-radius: unset;
+      border-bottom-left-radius: unset;
+*/
+        border-radius: 50px;
+
+    }
+
+    #status_container{
+        margin-left: 10px;
+        margin-top: 0px;
+        float: left;
+    }
+
+    #param_select_containter{
+        margin-top: -10px;
+        height: 40px;
+    }
+
+    #ParameterSelect {
+      top: -8px;
+    }
+
+
+
+    #text_container{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 0;
+        margin-top: 10px
+
+    }
+    #AverageReading_DateRange,#WatershedName,#LatLong {
+
+        font-size: 14px;
+    }
+
+     #WatershedName, #LatLong{
+    }
+    #Text{
+        margin-bottom: 6px;
+        margin-right: 10px;
+    }
+
+    #StationNameWrapper{
+        display: inline-block;
+        position: relative;
+        width: 100%;
+    }
+    
+    
+    #GaugeTitle > h4,
+    #TrendsTitle > h4{
+      font-size: 14px;
+    }
+    
+    #GaugeTitle{
+      min-height: 40px !important;
+    }
+    
+    
+    #TrendsTitle{
+      min-height: 40px !important;
+    }
+    
+    #StationNameText{
+        font-size: 20px;
+        margin-top: unset;
+        margin-left: unset;
+        margin-right: unset;
+        margin: 5px 5px 5px 5px;
+
+        padding-left: 5px;
+        float: left;
+        display: inline-block;
+        width: calc(100% - calc(var(--np-button-width-for-1024) * 4));
+
+        text-align: left;
+
+        height: unset;
+
+     }
+
+
+    .shiny-output-error{
+      display: none;
+    }
+
+
+    #footer {
+        position: absolute;
+        display: block;
+        bottom: 0;
+
+        border: var(--debug-border-width) solid black;
+        width: 100%;
+    }
+
+    #footer > a {
+        bottom: 5px !important;
+        right: 8px !important;
+        position: absolute;
+    }
+
+
+
+
+}

@@ -1,0 +1,128 @@
+#custom-modal-content{
+    border: var(--debug-border-width) solid mediumseagreen;
+
+}
+
+#Modal_Header{
+    display: inline-block;
+
+    width: 100%;
+   /* border: var(--debug-border-width) solid blue;
+    */
+   /* border-bottom: 1px solid #cccccc;
+    padding-bottom: 6px;
+*/
+}
+
+#Modal_TitleWrapper, #Modal_FooterWrapper{
+
+    text-align: center;
+    margin: 0 auto;
+}
+
+#Modal_FooterWrapper{
+    margin-top: 20px;
+}
+
+#GroupLogo_Modal{
+    display: inline-block;
+    position: relative;
+    border: var(--debug-border-width) solid red;
+
+}
+
+#GroupLogo_Modal > #GroupLogoImage_Modal{
+
+    width: 40px;
+    height: 40px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+#GroupName_Modal{
+    display: inline-block;
+    position: relative;
+    top: -13px;
+
+    border: var(--debug-border-width) solid pink;
+    padding-top: 5px;
+
+    font-family: 'Asap', 'Trebuchet MS', 'Arial', serif;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 0.7px;
+
+}
+
+#Modal_Main{
+
+    margin-top: 0;
+
+}
+
+#StationNameText_Modal{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    margin-top: unset;
+    color: var(--color-seven);
+    margin-bottom: 18px;
+}
+
+#WatershedName_Modal{
+    font-size: 12px;
+    color: var(--color-eight);
+    text-align: center;
+    margin-top: unset;
+}
+
+#QRCode {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+#ParameterTitle_Modal > h4{
+    font-size: 12px;
+    font-weight: normal;
+    color: var(--color-eight);
+    margin-top: unset;
+}
+
+
+#Modal_CommonsLogo{
+    display: inline-block;
+    position: relative;
+
+    width: 24px;
+    height: 24px;
+
+
+    background-image: url(../images/thecommons-logo-pin_x320.png);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+#Modal_CommonsText{
+    display: inline-block;
+    position: relative;
+    top: -7.5px;
+    padding-right: 6px;
+
+    letter-spacing: 0.7px;
+
+    border: var(--debug-border-width) solid red;
+
+    color: var(--color-one);
+
+    font-size: 10px;
+
+
+}

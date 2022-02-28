@@ -1,0 +1,528 @@
+  
+html {
+    /*height: -webkit-fill-available;
+    min-height: 100%;
+    */
+    --color-one: hsla(194, 70%, 52%, 1.0); /*Water Report Blue*/
+    --color-one-semiTrans: hsla(194, 70%, 52%, 0.5); /*Water Report Blue*/
+    --color-two: green;
+    --color-three: #ffffff;
+    --color-four: hsla(0, 0%, 100%, 1.0);  /*white*/
+    --color-four-semiTrans: hsla(0, 0%, 100%, 0.5);  /*white*/
+    --color-four-semiTrans75: hsla(0, 0%, 100%, 0.75);  /*white*/
+    --color-five: hsla(0, 0%, 0%, 1.0); /*black opaque*/
+    --color-five-semiTrans: hsla(0, 0%, 0%, 0.1); /*black transparent*/
+
+    --color-transparent: hsla(0, 0%, 0%, 0.0); /*transparent*/
+    --color-six: hsla(0, 0%, 60%, 1.0);
+    --color-seven: hsla(0, 0%, 18%, 1.0); /*Dark Grey*/
+    --color-eight: hsla(0, 0%, 66%, 1.0); /*Medium Dark Grey*/
+
+    --zero: 0;
+    --header-height: 40px;
+    --map-height: calc(25% + var(--header-height));
+    --icon-height: 30px;
+    --icon-width: 30px;
+    --gauge-width: 100%;
+    --gauge-height: 230px !important;
+
+    --status-dot-width: 50px;
+
+    --debug-border-width: 0px;
+}
+
+body {
+    /*  min-height: 100vh;*/
+    /*   min-height: -webkit-fill-available;*/
+
+    background-color: var(--color-one);
+    /*  position:fixed;
+      */
+    /*   background-image: url('../svg/wr_droplet.svg');
+
+
+       font-family: proxima-nova,"helvetica neue",helvetica,arial,sans-serif;
+   */
+}
+
+/*bg Containters*/
+
+#stationCard_background {
+
+    position: absolute;
+    z-index: 200;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    text-align: right;
+    vertical-align: bottom;
+
+    background-color: var(--color-four, white);
+
+    border: 0px solid white;
+    
+     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+   
+    background-size: 29%;
+    
+    background-image: url('../svg/wr_droplet_blue_5.svg');
+
+}
+
+#starterLogo_wrapper {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.staterLoader {
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    text-align: center;
+
+}
+
+.staterLoader > img {
+    width: 100px;
+    margin-left: -50px;
+    max-width: 100px;
+    display: block;
+}
+
+#starterLogo {
+    position: absolute !important;
+    bottom: 5px !important;
+    right: 8px !important;
+    color: var(--color-four);
+    /*
+    background-image: url('../svg/wr_droplet.svg');
+     background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: 50% 50%;
+      background-size: 16%;
+      */
+}
+
+#starterLogo > a {
+
+    color: var(--color-four);
+}
+
+/*end bg Containters*/
+
+
+#stationCard_main {
+
+    display: block;
+    position: absolute;
+    z-index: 520;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: var(--color-three, white);
+
+}
+
+
+/*big ui blocks */
+
+#main_header {
+    display: block;
+    position: absolute;
+    z-index: 2000;
+
+    top: 0px;
+    left: 0px;
+
+    overflow: visible !important;
+    height: var(--header-height);
+
+
+    width: 100vw;
+
+   background-color: var(--color-four);
+
+
+
+    padding: 0 5px 0 5px;
+   /* padding: 5px 5px 5px 5px;*/
+    border-bottom: 1px solid #cccccc;
+
+}
+
+#GroupLogo {
+    border: var(--debug-border-width) solid black;
+
+    display: inline-block;
+    position: absolute;
+
+    left: 0px;
+
+    z-index: 1000;
+
+    width: 40px;
+    height: 40px;
+
+
+}
+
+#GroupLogo > #GroupLogoImage{
+
+    width: 40px;
+    height: 40px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+#GroupName {
+    display: inline-block;
+    position: absolute;
+    left: calc(var(--icon-width) + 15px);
+    z-index: 1000;
+    color: var(--color-five);
+
+    font-family: 'Asap', 'Trebuchet MS', 'Arial', serif;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 0.7px;
+
+    border: var(--debug-border-width) solid green;
+    padding-top: 5px;
+    /* margin: 5px 0px 0px 5px;*/
+}
+
+#Map {
+    display: block;
+    position: relative;
+    top: var(--zero);
+    left: 0px;
+
+    height: var(--map-height);
+
+  /*  margin-top: var(--header-height); */
+    margin-bottom: 0;
+
+    border-bottom: 1px solid #cccccc;
+}
+
+.leaflet-control-zoom, .leaflet-control-layers {
+
+    display: none ;
+}
+
+
+/*Next/Prev Station Buttons Start*/
+
+.station_next, .station_prev {
+  /*  position: absolute;
+    display: block;
+    top: calc(10vh - 5px);
+    width: 30px;
+    height: 100px;
+    background-color: var(--color-one-semiTrans);
+    text-align: center;
+    box-shadow: 0 3px 3px rgba(0 0 0 0.2);
+*/
+    position: relative;
+    display: inline-block;
+ /*   top: unset;
+    left: unset;
+    right: unset;
+    float:left;
+*/
+    width: var(--np-button-width-for-1024);
+    height: var(--np-button-width-for-1024);
+
+    margin: 5px 5px 5px 5px;
+
+    text-align: center;
+    box-shadow: unset;
+
+    border: 1px solid var(--color-one);
+    background-color: unset;
+
+    /*          border-top-right-radius: unset;
+          border-top-left-radius : unset;
+          border-bottom-right-radius: unset;
+          border-bottom-left-radius: unset;
+    */
+    border-radius: 50px;
+
+}
+
+/*
+.nextPrevImgWrapper{
+   display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+*/
+.modebar-container {
+    display: none !important;
+}
+
+.station_next > img, .station_prev > img {
+    vertical-align: middle;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 3em;
+}
+
+.station_prev {
+    float: left;
+    z-index: 1000;
+    /*border-top-right-radius: 10px 10px ;
+    border-bottom-right-radius: 10px 10px;
+
+     */
+}
+
+.station_next {
+    float: right;
+    z-index: 1000;
+    /*
+    border-top-left-radius: 10px 10px;
+    border-bottom-left-radius: 10px 10px;
+*/
+}
+
+/*Next/Prev Station Buttons End*/
+
+#main {
+    height: calc();
+}
+
+#main_info {
+
+    display: block;
+    position: relative;
+    top: var(--zero);
+    left: 0px;
+
+    border: var(--debug-border-width) solid green;
+
+    height: calc(var(--map-height) - var(--header-height));
+
+}
+
+#main_tabset {
+    display: block;
+    position: relative;
+    top: var(--zero);
+    left: 0px;
+   /* margin: 0 10px 0 10px;*/
+    border: var(--debug-border-width) solid orange;
+}
+
+
+/*START STATUS*/
+#status_container {
+    display: block;
+
+    position: relative;
+
+    width: 40%;
+    min-width: 160px;
+
+    border: var(--debug-border-width) solid red;
+
+    padding-left: 5px;
+
+    margin-top: 0px;
+}
+
+.status_item {
+
+    display: block;
+    float: left;
+    position: relative;
+
+    min-height: 40px;
+
+    border: var(--debug-border-width) solid green;
+
+    padding-right: 5px;
+
+
+}
+
+.status_item_2 {
+
+    display: block;
+    float: left;
+    position: relative;
+
+    height: 50%;
+    border: var(--debug-border-width) solid blue;
+
+    width: calc(100% - var(--status-dot-width));
+
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/*END STATUS*/
+
+
+/*START PARAM SELECT*/
+#param_select_containter {
+    position: relative;
+    float: right;
+    width: 55%;
+    min-width: 180px;
+    border: var(--debug-border-width) solid red;
+    height: 30px !important;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+#ParameterSelect {
+    display: block;
+    position: relative;
+    top: -40px;
+
+}
+
+
+.shiny-input-container:not(.shiny-input-container-inline) {
+    width: 100%;
+}
+
+.selectize-input > div {
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 90%;
+
+}
+
+/*END PARAM SELECT*/
+
+
+#text_container {
+    position: relative;
+    float: left;
+    position: relative;
+    width: 100%;
+    border: var(--debug-border-width) solid green;
+
+    padding-left: 5px;
+    padding-right: 5px;
+
+    margin-bottom: 10px;
+    margin-top: 2px;
+
+}
+
+#StationNameWrapper{
+ /*   display: inline-block;*/
+    position: relative;
+    width: 100%;
+
+}
+
+#StationNameText {
+    color: black;
+    font-size: 17px;
+    font-weight: 300;
+    margin-top: 6px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    height: 35px;
+
+    text-align: center;
+}
+
+#AverageReading_DateRange ,#WatershedName, #LatLong{
+    font-size: 12px;
+}
+
+#WatershedName {
+
+    padding-bottom: 3px;
+}
+
+
+#AverageReading_DateRange {
+
+    color: var(--color-six);
+}
+
+
+#qr-tab {
+    float: right;
+    padding: 0px 0px
+
+}
+
+#MoreInfoLink {
+
+    padding: 4px 0px 6px 10px;
+
+}
+
+#qr-icon {
+    height: var(--icon-height);
+    width: var(--icon-width);
+}
+
+
+
+#footer {
+    position: absolute;
+    display: block;
+    bottom: 0;
+
+    border: var(--debug-border-width) solid black;
+    width: 100%;
+
+    border: 0px solid red;
+}
+
+#footer > a {
+    right: 8px !important;
+    bottom: 5px !important;
+
+     position: absolute;
+
+}
+
+
+.powered-logo-tag {
+    position: relative;
+    display: block;
+    float: right;
+}
+
+
+
+

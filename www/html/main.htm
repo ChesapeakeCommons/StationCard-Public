@@ -1,0 +1,128 @@
+<script type="text/javascript"> 
+
+</script>
+
+
+<div id='stationCard_background'>
+
+  <div id='starterLogo_wrapper'>  
+      
+          <div class="showbox">
+            <div class="start_loader" style='border: 0px solid red;'>
+              <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+              </svg>
+            </div>
+         <!--   <div class='start_loader'>
+              <div class='start_droplet'></div>
+            </div>
+            -->
+          </div>            
+            <div id='starterLogo'>
+                <a href='http://ourcommoncode.org'>Powered by The Commons</a>
+              </div>
+
+      
+  </div>
+  
+
+  
+</div>
+
+
+<div id='stationCard_main'>
+
+   <div id='main_header'>
+
+    {{ groupLogo }}
+
+      {{ groupName }}
+
+  </div>
+
+    {{ map }}
+
+    {{ nextStationLink }}
+
+    {{ prevStationLink }}
+
+    <div id="mapExpand" onclick="mapExpand()">
+
+    </div>
+
+
+
+  <div id='main'>
+    
+   
+    
+    <div id='main_info'>
+
+
+
+        <div id='StationNameWrapper'>
+
+              <div id='NextPrevConatiner'>
+                  <div id="StationNameSubWrapper" >
+                  {{ stationNameText }}
+                  </div>
+              </div>
+
+
+          </div>
+
+        <div id="tablet_layout_container">
+
+            <div id="tablet_col_l" ></div>
+
+            <div id="tablet_col_r"> </div>
+
+        </div>
+
+        <div id='status_container'>
+            <div class='status_item'>
+               {{ statusDot }}
+            </div>
+            <div class='status_item_2 bold'>
+                {{ statusText }}
+            </div>
+            <div class='status_item_2'>
+                {{ sampleText }}
+            </div>
+
+          </div>
+          <div id='param_select_containter'>
+            {{ parameterSelect }}
+          </div>
+
+        <div id='text_container'>
+
+            {{ latLong}}
+
+            {{ watershedName }}
+
+            {{ text }}
+      
+      </div>
+      
+                      
+      {{ MoreInfoLink }}
+                      
+    </div>
+    
+    
+    <div id='main_tabset'>
+    
+    {{ v_tabsetPanel }}
+    
+    </div>
+    
+    
+  </div>
+
+   
+
+    </div>
+
+
+</div>

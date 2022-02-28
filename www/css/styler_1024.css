@@ -1,0 +1,159 @@
+/*
+for styles from 1024px: Small screens, laptops
+*/
+@import url('circular_loader_001.css');
+
+@import url("./styler_h736.css");
+
+html {
+     --mainInfo-width-for-1024 : 400px;
+     --map-width-for-1024: calc(100% - 400px);
+    
+}
+
+@media only screen and (min-width:1024px) {
+  
+  body {
+    /*background-color: pink;*/
+   /* background-size: 3%;
+    */
+  }
+
+  #main {
+    position: absolute;
+    display: block;
+    height: calc(100vh - 50px);
+    width:  var(--mainInfo-width-for-1024);
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: none;
+    
+    right: 0;
+    top: 0;
+    margin-top: 50px;
+    
+    border: 0px solid red;
+  }
+  
+  #Map{
+  display: block;
+  position: relative;
+  top: var(--zero,--zero);
+  left: 0px;
+  
+  height: calc(100vh - var(--header-height));
+  width: var(--map-width-for-1024);
+  /* width : calc(100% - var(--mainInfo-width-for-1024)) !important; */
+ /* width : calc(calc(var(--mainInfo-width-for-1024) - 100%) * -1.0) !important; */
+  margin-top: var(--header-height);
+  margin-bottom: 0;
+  
+  border-bottom: 0px solid #cccccc;
+   border-right: 1px solid #cccccc;
+}
+
+.leaflet-control-zoom, leaflet-control-layers {
+  
+  display: block;
+}
+
+
+#nextPrevConatiner{
+  
+  display: block;
+  position: relative;
+  width: 100%;
+  
+  z-index:1200;
+  
+  height: 50px;
+  
+  border:0px solid red;
+  
+}
+
+.station_next, .station_prev{
+ position: relative;
+ display: block;
+ top: unset;
+ float:left;
+ width: 50%;
+ height: 36px;
+ background-color: var(--color-one-semiTrans);
+ text-align: center;
+ box-shadow: unset;
+ 
+ left: unset;  
+  right: unset;
+  border-top-right-radius: unset;
+  border-top-left-radius : unset;
+  border-bottom-right-radius: unset;
+  border-bottom-left-radius: unset;
+  
+}
+
+#ParameterSelect {
+  top: -8px;
+}
+
+#text_container{
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+#StationNameText, #WatershedName, #Text{
+  margin-bottom: 10px;
+} 
+
+.nav-tabs > li{
+  display:none;
+}
+
+
+.nav-tabs > #qr-tab{
+  display:block;
+}
+
+.tab-content > .tab-pane{
+  display: block !important;
+}
+
+
+.load-container {
+    width : 50% !important;
+}
+/*
+  overflow: unset !important;
+
+  position: absolute;
+  top: 50%;
+  webkit-transform: translateY(-50);
+ */
+}
+
+.shiny-output-error{
+  display: none;
+}
+
+
+ 
+/*
+  
+  #GaugePlot{
+    margin: 10px 0 0 15px !important;
+    padding: 0 0px 0 0 !important;
+    width: 350px !important;
+    height: 220px !important;
+    display: block;
+    border: 0px solid red;
+  }
+  #GaugePlot > .svg-container{
+    width: 350px !important;
+  }   
+  
+  #GaugePlot > .main-svg{
+    width: 340px !important;
+  }
+  */
+  
+}

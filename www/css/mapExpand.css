@@ -1,0 +1,26 @@
+
+@media only screen and (max-width:640px) {
+
+    #mapExpand {
+        position: absolute;
+        display: inline-block;
+
+        height: 30px;
+        width: 30px;
+
+        background-image: url('../svg/fullscreen_wrblue_24dp.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        top: calc(var(--map-height) - 35px);
+        left: 5px;
+
+    }
+
+}
+@media only screen and (min-width:641px) {
+    #mapExpand {
+        display: none;
+    }
+}

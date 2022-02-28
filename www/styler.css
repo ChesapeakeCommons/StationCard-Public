@@ -1,0 +1,241 @@
+  
+h2{
+    padding-top: 7px;
+    margin-top: 0px;
+    }
+  
+  h3{
+	margin-bottom: 10px;
+	text-align: left;
+	margin-bottom: 0px;
+}
+
+  h4{
+  margin-left: 10px;
+}
+
+
+
+h5{
+	margin-bottom: 2px;
+  margin-top: 1.5px;
+
+}
+
+
+#Container{
+  left: 0;    
+  top: 0;    
+  position: absolute;
+  width: 500px;
+  max-width: 100%;
+  height: 715px;
+/*  flex-direction: row; */
+  border: 1px solid black;
+  overflow: auto;
+}
+
+.jqui-wrapper > .ui-resizable
+{
+  width: 100%;
+}
+
+#Header{
+  width:100%;
+  height: 60px;
+  background-color: #01436d;
+}
+/*
+#GroupLogo {
+  display: inline-block;
+  float: right;
+  width: 25px;
+  height: 25px;
+}
+*/
+/*
+#Footer{
+  width:100%;
+  height: 30px;
+  background-color: #01436d;
+}
+*/
+
+#header-logo {
+    border: 0px solid green;
+    display: inline-block;
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 80%;
+    background-image: url(./images/logo-mobile.png);
+    background-repeat: no-repeat;
+}
+
+#Commons-logo {
+    border: 0px solid green;
+    display: inline-block;
+    float: right;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/CommonsLogo.png);
+    background-repeat: no-repeat;
+}
+
+
+.leaflet-container 
+{
+  width: 100%;
+  max-height: 200px;
+	text-align: center;
+	border-bottom: 1px solid black;
+}
+
+
+#StatusText
+{
+font-size: 20px; 
+font-weight: bold;
+float: right;
+}
+#StatusDotContainer
+{
+float: right;
+margin-right: 3px;
+margin-top: 3px;
+}
+
+
+#Text
+{
+ margin-top: -12px;
+ margin-left: 10px;
+ width: 95%;
+ height: 150px;
+}
+
+/*
+.form-group.shiny-input-container
+{
+  margin-right: 10px;
+  margin-top: -10px;
+  float: right;
+  width: 200px;
+}
+*/
+#ParameterSelect{
+  margin-right: 5px;
+  margin-top:0px;
+  float: right;
+  width: 160px;
+}
+
+#ParameterSelect > .shiny-input-container > .div > .selectize-control > .selectize-input > .item 
+{
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis !important;
+ width:80%;
+}
+
+#ParameterSelect > .shiny-input-container > div > .selectize-control > .selectize-input {
+    margin-right: 4px;
+    height: 50px;
+    margin-top: 140px;
+    margin-bottom: -15px;
+}
+
+.selectize-control.single .selectize-input:after {
+right: 2px !important;
+border-width: 0 0 0 0 !important;
+}
+
+#GaugeContainer{
+ 
+  height: 800px;
+/*  flex-direction: row; */
+  height: auto !important;
+  margin-left: 50px;
+}
+ 
+/*
+#GaugeTitle
+{
+   margin-left: 125px;
+   display: inline-block;
+}
+.plot-container-plotly
+{
+margin-left: 10px;
+}
+*/
+
+
+#MoreInfoLink
+{
+ margin-left: 10px;
+}
+
+
+.tab-pane{
+  /*height: 270px !important;
+  */
+  height: auto !important;
+}
+#GaugePlot{
+
+}
+
+#GaugePlot > .plot-container > .svg-container > .main-svg > .indicatorlayer > .trace > .title {
+    max-width: 350px !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    font-size: 19px !important;
+   
+}
+#TrendsPlot{
+  margin: 20px 0 0 3% !important;
+}
+
+
+
+#QRCode {
+  display: inline-block;
+  float: left;
+  margin-left: 55px !important;
+  margin-top: 55px !important;
+}
+
+
+.modal-content
+{
+  width: 300px !important;
+  height: 300px !important;
+
+}
+
+/*  #GaugePlot{
+    margin: 15px 0 0 15px !important;
+    padding: 0 0px 0 0 !important;
+    width: 350px !important;
+    height: 222px !important;
+    display: block;
+    border: 0px solid red;
+  }
+  #GaugePlot > .svg-container{
+    width: 350px !important;
+  }   
+  
+  #GaugePlot > .main-svg{
+    width: 340px !important;
+  }
+  
+  #GaugePlot > .plot-container > .svg-container > .main-svg > .indicatorlayer > .trace > .title {
+    max-width: 300px !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    font-size: 14px !important;
+}
