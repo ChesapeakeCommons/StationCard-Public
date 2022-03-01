@@ -3,7 +3,7 @@ Water Reporter Station Card
 
 About
 ---------------
-The Water Reporter Station Card is an R Shiny application that shows Water Reporter data including stations, readings, and thresholds with mapping and chart features. If your a group manager needing assistance configuring a Station Card email us at support@waterreporter.org and check out our intercom documentation. 
+The Water Reporter Station Card is an R Shiny application that shows Water Reporter data including stations, readings, and thresholds with mapping and chart features. If you're a group manager and need assistance configuring a Station Card, email us at [support@waterreporter.org](mailto:support@waterreporter.org) and check out our Intercom documentation.
 
 Quick Links
 ---------------
