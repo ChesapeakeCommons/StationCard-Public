@@ -13,7 +13,7 @@ Developers
 ---------------
 ### To run the Station Card via the terminal
 First add your Water Reporter API access token to App.R: 
-`Token <- "YourTokenHere"` before attempting to run
+`Token <- "YourTokenHere"` before attempting to run the app.
 
 #### [Install CRAN](https://cran.r-project.org/)
 
