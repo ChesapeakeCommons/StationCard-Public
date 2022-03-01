@@ -7,8 +7,6 @@ The Water Reporter Station Card is an R Shiny application that shows Water Repor
 
 Quick Links
 ---------------
-[Application](https://station-card.waterreporter.org/?dataset=860&station=8740&parameter=666)
-
 [Git](https://github.com/ChesapeakeCommons/StationCard-Public)
 
 Developers
